@@ -7,10 +7,12 @@ export const Form = ({ onSubmit }) => {
     e.preventDefault();
     const { value } = e.target.elements.search;
     if (!value) {
-      return toast.error('Please enter search quary');
+      toast.error('Please enter a search query');
+      return;
     }
-    onSubmit(e.target.search.value);
+    onSubmit(value);
   };
+
   return (
     <form className={style.form} onSubmit={handleSubmit}>
       <button className={style.button} type="submit">
@@ -21,7 +23,6 @@ export const Form = ({ onSubmit }) => {
         className={style.input}
         placeholder="What do you want to write?"
         name="search"
-        required
         autoFocus
       />
     </form>

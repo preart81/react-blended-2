@@ -1,5 +1,6 @@
 import { Form, Text, TodoList } from 'components';
 import { nanoid } from 'nanoid';
+
 import { useEffect, useState } from 'react';
 
 export const Todos = () => {
@@ -11,11 +12,11 @@ export const Todos = () => {
     [todos],
   );
 
+
   const addTodo = text => {
     setTodos([...todos, { text, id: nanoid() }]);
   };
 
-  // console.log(todos);
   const delTodo = id => {
     setTodos(todos.filter(item => item.id !== id));
   };
