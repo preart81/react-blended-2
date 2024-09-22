@@ -23,7 +23,6 @@ export const Form = ({ onSubmit }) => {
         className={style.input}
         placeholder="What do you want to write?"
         name="search"
-        // required
         autoFocus
       />
     </form>

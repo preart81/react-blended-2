@@ -2,6 +2,7 @@ import { Text } from 'components';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import style from './TodoListItem.module.css';
 
+
 export const TodoListItem = ({ text, count, delTodo, id }) => {
   return (
     <div className={style.box}>
